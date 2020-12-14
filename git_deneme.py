@@ -1,0 +1,1 @@
+print( " bu kod git hub için yazıldı!")
