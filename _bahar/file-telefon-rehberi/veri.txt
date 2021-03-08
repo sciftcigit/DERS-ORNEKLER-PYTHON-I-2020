@@ -1,0 +1,12 @@
+Ad: aaa                             Soyad: bbb                             Telefon: 111               
+Ad: bbb                             Soyad: nnn                             Telefon: 444               
+Ad: Hatice Canan                    Soyad: BAHAR TOPALOÐLU                 Telefon: 03216547898       
+Ad: Aþýk                            Soyad: Veysel                          Telefon: 123456789         
+Ad: 2                               Soyad: 1                               Telefon: 2                 
+Ad: 1                               Soyad: 2                               Telefon: 2                 
+Ad: dedede                          Soyad: frfrfrfr                        Telefon: 3333              
+Ad: Müslüm                          Soyad: Gürses                          Telefon: 123456789         
+Ad: dddd                            Soyad: eeee                            Telefon: 333               
+Ad: fdsa                            Soyad: fdsa                            Telefon: fdsa              
+Ad: dsafdsa                         Soyad: fdsa                            Telefon: fdsa              
+Ad: fdsa                            Soyad: fsd                             Telefon: fds               

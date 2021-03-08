@@ -1,0 +1,2 @@
+
+open("deneme.txt","x")
