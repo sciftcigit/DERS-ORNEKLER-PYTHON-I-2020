@@ -3,6 +3,7 @@ import os
 
 while True : 
 
+    # Menü gösterme 
     print("\n\n\n\n")
     print(" ------------------")
     print(" Kayıt Ekle     (1)")
@@ -13,6 +14,7 @@ while True :
     print(" Çıkış          (0)")
     print("\n\n\n\n")    
     
+    # Kullanıcıdan bir seçim yapmasını istiyoruz z
     secim = input("Yapmak istediğiniz işlemi seçiniz: ")
     
     if (secim == "1") : 
@@ -20,19 +22,22 @@ while True :
     elif (secim == "2"):
         mdl_islemler.kayitlari_listele()
     elif (secim == "3"):
-        print("kayıt sil")
+        mdl_islemler.kayitlari_listele()
+        mdl_islemler.kayit_sil()
     elif (secim == "4"):
-        print("kayıt düzenle")
+        mdl_islemler.kayitlari_listele()
+        mdl_islemler.kayit_duzenle()
     elif (secim == "0"):
         print("Program kapatılıyor.")
         break
     else :
         print("Geçerli bir seçim yapmadınız!")
-        
+     
+    """    
     input("Devam etmek için enter tuşuna basınız.")
     clear = lambda: os.system('cls')
     clear()
-    
+    """
         
         
     
