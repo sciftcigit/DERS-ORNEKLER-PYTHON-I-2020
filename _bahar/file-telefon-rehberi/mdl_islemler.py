@@ -17,8 +17,7 @@ def kayit_ekle():
     dosya = open("veri.txt","a")
     dosya.write("\n" + metin_f)
     dosya.close()
-    
-    
+
     
 def kayitlari_listele() :
     dosya = open("veri.txt","r")
@@ -53,8 +52,8 @@ def kayit_sil() :
     # Liste içinde olan tüm veriyi satır satır dosyaya yeniden yazıyoruz 
     for satir in dizi : 
         dosya.write(satir) 
-    dosya.close()
     
+    dosya.close()
     print("Kayıt silindi!")
     
     
