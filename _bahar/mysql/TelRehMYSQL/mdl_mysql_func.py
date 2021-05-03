@@ -1,4 +1,5 @@
 import mysql.connector
+import mdl_kontrol as kont
 
 def baglan() :
     
@@ -13,9 +14,24 @@ def baglan() :
 def ekle() :
 
     mydb = baglan()
-    ad = input("Ad giriniz ..:")
-    soyad = input("Soyad giriniz..:")
-    tel = input("Telefon giriniz..:")
+
+    ad_yanlis = False
+    while not ad_yanlis :
+        ad    = input("Ad giriniz ..:")
+        ad_yanlis = kont.ad_kontrol(ad)
+        
+    
+    soyad_yanlis = False
+    while not soyad_yanlis :
+        soyad = input("Soyad giriniz..:")
+        soyad_yanlis = kont.ad_kontrol(soyad)
+    
+    tel_yanlis = False
+    while not tel_yanlis :
+        tel = input("Telefon giriniz..:")
+        tel_yanlis = kont.telefon_kontrol(tel)
+    
+    
 
     mycursor = mydb.cursor()
 
@@ -25,19 +41,34 @@ def ekle() :
 
     mydb.commit()
 
-    print(mycursor.rowcount, " kayıt eklendi.")
-
-    
+    print(mycursor.rowcount, " kayıt eklendi.")   
 
 def gunc() :
  
     mydb = baglan()
-    myid = input("Güncellemek istediğiniz kaydın id'sini giriniz ..:")
-
     
-    ad    = input("Ad giriniz ..:")
-    soyad = input("Soyad giriniz..:")
-    tel   = input("Telefon giriniz..:")
+
+    myid_yanlis = False
+    while not myid_yanlis :
+        myid = input("Güncellemek istediğiniz kaydın id'sini giriniz ..:")
+        myid_yanlis = kont.id_kontrol(myid)
+        
+        
+    ad_yanlis = False
+    while not ad_yanlis :
+        ad    = input("Ad giriniz ..:")
+        ad_yanlis = kont.ad_kontrol(ad)
+        
+    
+    soyad_yanlis = False
+    while not soyad_yanlis :
+        soyad = input("Soyad giriniz..:")
+        soyad_yanlis = kont.ad_kontrol(soyad)
+        
+    tel_yanlis = False
+    while not tel_yanlis :
+        tel = input("Telefon giriniz..:")
+        tel_yanlis = kont.telefon_kontrol(tel)
 
 
     mycursor = mydb.cursor()
@@ -52,12 +83,12 @@ def gunc() :
           """
      
 
+
     mycursor.execute(sql)
 
     mydb.commit()
 
     print(mycursor.rowcount, " kayıt güncellendi.")
-
     
 def list() :
 
@@ -68,21 +99,20 @@ def list() :
     myresult = mycursor.fetchall()
 
     # burada header / başlık oluşturuyoruz
-    cizgi_at()
+    kont.cizgi_at()
     metin = "|{:<5} {:<10} {:<10} {:<5} "
     metin_f = metin.format("id","Ad", "Soyad", "Telefon")
     print(metin_f)
-    cizgi_at()
+    kont.cizgi_at()
 
     # burada veriyi ekrana yazdırıyoruz
     for veri in myresult:
 
         metin = "|{:<5} {:<10} {:<10} {:<5} "
-        metin_f = metin.format(veri[0],veri[1], veri[2], telefon_format(veri[3]))
+        metin_f = metin.format(veri[0],veri[1], veri[2], kont.telefon_format(veri[3]))
         print(metin_f)
 
-    cizgi_at()
-
+    kont.cizgi_at()
 
 def sil() :
 
@@ -99,8 +129,5 @@ def sil() :
 
     print(mycursor.rowcount, " kayıt silindi!")
 
-def cizgi_at() :
-    print("-------------------------------------------------")
 
-def telefon_format(n):                                                                                                                                  
-    return format(int(n[:-1]), ",").replace(",", "-") + n[-1]  
+    

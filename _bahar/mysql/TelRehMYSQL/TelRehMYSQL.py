@@ -1,4 +1,4 @@
-import os
+
 import mdl_mysql_func as md
 while True : 
 
@@ -33,13 +33,8 @@ while True :
         break
     else :
         print("Geçerli bir seçim yapmadınız!")
-     
-    """    
-    input("Devam etmek için enter tuşuna basınız.")
-    clear = lambda: os.system('cls')
-    clear()
-    """
-        
+  
+
         
     
     
